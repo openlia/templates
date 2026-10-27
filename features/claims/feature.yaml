@@ -1,0 +1,35 @@
+schema: 1
+id: claims
+name: Verifiable Claim Ledger
+version: 0.1.0
+description: Provenance-backed personal claim ledger tracking evidence, certainty, and temporal validity.
+author: OpenLia maintainers
+license: MIT
+requires:
+  core_domains:
+    - inbox
+    - sources
+  features: []
+  tools: []
+domains:
+  - path: knowledge/claims
+    kind: extension
+    label: Claims
+    purpose: Durable, provenance-backed personal claims and evidence references.
+    lifecycle: candidate -> active -> contested or superseded -> archived
+    route: claim
+    tags:
+      - claim
+      - knowledge
+    template: knowledge/claims/claim-template.md
+    include_in_briefing: true
+    briefing_category: claims
+    feature: claims
+skills: []
+policy:
+  allowed_domains:
+    - knowledge/claims
+  allowed_actions:
+    - create_records
+    - update_records
+    - archive_records

@@ -1,0 +1,28 @@
+schema: 1
+id: personal-os
+name: Personal Operating System (Personal OS)
+version: 0.1.0
+description: Complete Personal OS workspace profile with tasks, goals, calendar, verifiable claims, daily briefings, and productivity skills.
+author: OpenLia maintainers
+license: MIT
+features:
+  - tasks
+  - goals
+  - calendar
+  - claims
+  - daily-briefing
+skills:
+  - inbox-triage
+  - document-intelligence
+  - daily-briefing
+  - weekly-review
+  - calendar
+  - workspace-git
+  - workspace-organize
+requires:
+  tools:
+    - remind
+instructions:
+  soul: SOUL.md
+  profile_agents: AGENTS.md
+  workspace_agents: WORKSPACE_AGENTS.md

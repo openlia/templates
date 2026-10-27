@@ -1,0 +1,394 @@
+{
+  "schema": 1,
+  "repository": "https://github.com/openlia/templates.git",
+  "profiles": [
+    {
+      "id": "personal-os",
+      "name": "Personal Operating System (Personal OS)",
+      "version": "0.1.0",
+      "description": "Complete Personal OS workspace profile with tasks, goals, calendar, verifiable claims, daily briefings, and productivity skills.",
+      "path": "profiles/personal-os",
+      "features": [
+        "tasks",
+        "goals",
+        "calendar",
+        "claims",
+        "daily-briefing"
+      ],
+      "skills": [
+        "inbox-triage",
+        "document-intelligence",
+        "daily-briefing",
+        "weekly-review",
+        "calendar",
+        "workspace-git",
+        "workspace-organize"
+      ],
+      "requires": {
+        "tools": [
+          "remind"
+        ]
+      }
+    }
+  ],
+  "features": [
+    {
+      "id": "areas",
+      "name": "Areas of Responsibility",
+      "version": "0.3.0",
+      "description": "Ongoing responsibilities and standards without a fixed end date.",
+      "path": "features/areas",
+      "domains": [
+        "areas"
+      ],
+      "skills": [],
+      "requires": {
+        "core_domains": [
+          "inbox",
+          "archive"
+        ],
+        "features": []
+      }
+    },
+    {
+      "id": "calendar",
+      "name": "Calendar & Remind Scheduling",
+      "version": "0.1.0",
+      "description": "Remind-backed calendar scheduling, recurrence evaluation, and companion event notes.",
+      "path": "features/calendar",
+      "domains": [
+        "calendar"
+      ],
+      "skills": [
+        "calendar"
+      ],
+      "requires": {
+        "core_domains": [
+          "inbox"
+        ],
+        "features": [],
+        "tools": [
+          "remind"
+        ]
+      }
+    },
+    {
+      "id": "claims",
+      "name": "Verifiable Claim Ledger",
+      "version": "0.1.0",
+      "description": "Provenance-backed personal claim ledger tracking evidence, certainty, and temporal validity.",
+      "path": "features/claims",
+      "domains": [
+        "knowledge/claims"
+      ],
+      "skills": [],
+      "requires": {
+        "core_domains": [
+          "inbox",
+          "sources"
+        ],
+        "features": [],
+        "tools": []
+      }
+    },
+    {
+      "id": "daily-briefing",
+      "name": "Daily Briefing",
+      "version": "0.1.0",
+      "description": "Dated morning briefing reports synthesizing calendar, tasks, goals, and inbox items.",
+      "path": "features/daily-briefing",
+      "domains": [
+        "inbox/daily-briefing"
+      ],
+      "skills": [
+        "daily-briefing"
+      ],
+      "requires": {
+        "core_domains": [
+          "inbox"
+        ],
+        "features": [],
+        "tools": []
+      }
+    },
+    {
+      "id": "decision-analysis",
+      "name": "Structured Decision Analysis",
+      "version": "0.3.0",
+      "description": "Weighted decision scoring, multi-option trade-off matrices, sensitivity checks, and decision records.",
+      "path": "features/decision-analysis",
+      "domains": [
+        "decisions"
+      ],
+      "skills": [
+        "decision-analysis"
+      ],
+      "requires": {
+        "core_domains": [
+          "inbox",
+          "archive"
+        ],
+        "features": []
+      }
+    },
+    {
+      "id": "deep-research",
+      "name": "Deep Source-Backed Research",
+      "version": "0.3.0",
+      "description": "Structured multi-source investigations, evidence matrices, and research briefs under knowledge/research.",
+      "path": "features/deep-research",
+      "domains": [
+        "knowledge/research"
+      ],
+      "skills": [
+        "deep-research"
+      ],
+      "requires": {
+        "core_domains": [
+          "knowledge",
+          "sources",
+          "archive"
+        ],
+        "features": []
+      }
+    },
+    {
+      "id": "goals",
+      "name": "Goals & Outcomes",
+      "version": "0.1.0",
+      "description": "High-level outcomes, rationale, milestones, and interactive goals Mini-Project.",
+      "path": "features/goals",
+      "domains": [
+        "goals"
+      ],
+      "skills": [],
+      "requires": {
+        "core_domains": [
+          "inbox"
+        ],
+        "features": [],
+        "tools": []
+      }
+    },
+    {
+      "id": "ideas",
+      "name": "Ideas & Someday/Maybe",
+      "version": "0.3.0",
+      "description": "Possible future work, experiments, and observations.",
+      "path": "features/ideas",
+      "domains": [
+        "ideas"
+      ],
+      "skills": [],
+      "requires": {
+        "core_domains": [
+          "inbox",
+          "archive"
+        ],
+        "features": []
+      }
+    },
+    {
+      "id": "monitors",
+      "name": "Monitors & Watch Conditions",
+      "version": "0.3.0",
+      "description": "Conditions and signals to watch for change over time.",
+      "path": "features/monitors",
+      "domains": [
+        "monitors"
+      ],
+      "skills": [],
+      "requires": {
+        "core_domains": [
+          "inbox",
+          "archive"
+        ],
+        "features": []
+      }
+    },
+    {
+      "id": "people",
+      "name": "People & Relationship Context",
+      "version": "0.3.0",
+      "description": "Relationship context, contact notes, and person records.",
+      "path": "features/people",
+      "domains": [
+        "people"
+      ],
+      "skills": [],
+      "requires": {
+        "core_domains": [
+          "inbox",
+          "archive"
+        ],
+        "features": []
+      }
+    },
+    {
+      "id": "personal-finance",
+      "name": "Personal Finance & Double-Entry Accounting",
+      "version": "0.3.0",
+      "description": "Double-entry hledger bookkeeping, statement intake, account mappings, portfolio valuation, and financial reviews.",
+      "path": "features/personal-finance",
+      "domains": [
+        "finance",
+        "finance/intake",
+        "finance/accounts",
+        "finance/portfolios",
+        "finance/reviews"
+      ],
+      "skills": [
+        "personal-finance"
+      ],
+      "requires": {
+        "core_domains": [
+          "inbox",
+          "sources"
+        ],
+        "features": [],
+        "tools": [
+          "hledger"
+        ]
+      }
+    },
+    {
+      "id": "personal-health",
+      "name": "Personal & Family Health Records",
+      "version": "0.3.0",
+      "description": "Family medical history, health profiles, encounters, conditions, treatments, and source-linked clinician reviews.",
+      "path": "features/personal-health",
+      "domains": [
+        "health",
+        "health/profiles",
+        "health/history",
+        "health/conditions",
+        "health/treatments",
+        "health/reviews"
+      ],
+      "skills": [
+        "personal-health"
+      ],
+      "requires": {
+        "core_domains": [
+          "inbox",
+          "sources",
+          "archive"
+        ],
+        "features": []
+      }
+    },
+    {
+      "id": "shopping",
+      "name": "Shopping & Purchase Candidates",
+      "version": "0.3.0",
+      "description": "Product research, price comparisons, and purchase candidates.",
+      "path": "features/shopping",
+      "domains": [
+        "shopping"
+      ],
+      "skills": [],
+      "requires": {
+        "core_domains": [
+          "inbox",
+          "archive"
+        ],
+        "features": []
+      }
+    },
+    {
+      "id": "tasks",
+      "name": "Tasks & Action Tracking",
+      "version": "0.1.0",
+      "description": "Concrete actions, priorities, due dates, and interactive task board Mini-Project.",
+      "path": "features/tasks",
+      "domains": [
+        "tasks"
+      ],
+      "skills": [],
+      "requires": {
+        "core_domains": [
+          "inbox"
+        ],
+        "features": [],
+        "tools": []
+      }
+    },
+    {
+      "id": "travel",
+      "name": "Travel & Itineraries",
+      "version": "0.3.0",
+      "description": "Trip planning, itineraries, booking checklists, and travel notes.",
+      "path": "features/travel",
+      "domains": [
+        "travel"
+      ],
+      "skills": [],
+      "requires": {
+        "core_domains": [
+          "inbox",
+          "calendar",
+          "archive"
+        ],
+        "features": []
+      }
+    }
+  ],
+  "skills": [
+    {
+      "id": "calendar",
+      "name": "calendar",
+      "version": "0.1.0",
+      "description": "Manage calendar events, agendas, reminders, and recurring schedules by authoring Remind entries directly with the LLM.",
+      "path": "skills/calendar",
+      "requires": {}
+    },
+    {
+      "id": "daily-briefing",
+      "name": "daily-briefing",
+      "version": "0.1.0",
+      "description": "Collect workspace sources and prepare an evidence-based daily briefing.",
+      "path": "skills/daily-briefing",
+      "requires": {}
+    },
+    {
+      "id": "document-intelligence",
+      "name": "document-intelligence",
+      "version": "0.2.0",
+      "description": "Capture, unlock, OCR, search, and inspect evidence documents, YouTube video transcripts, and video summaries in the OpenLia Ingestion Vault across embedded and standalone deployments.",
+      "path": "skills/document-intelligence",
+      "requires": {}
+    },
+    {
+      "id": "inbox-triage",
+      "name": "inbox-triage",
+      "version": "0.2.0",
+      "description": "Classify captured items into reviewable workspace destinations without applying consequential changes.",
+      "path": "skills/inbox-triage",
+      "requires": {}
+    },
+    {
+      "id": "weekly-review",
+      "name": "weekly-review",
+      "version": "0.1.0",
+      "description": "Review goals, tasks, decisions, health records, and finance open loops without acting.",
+      "path": "skills/weekly-review",
+      "requires": {}
+    },
+    {
+      "id": "workspace-git",
+      "name": "workspace-git",
+      "version": "1.0.0",
+      "description": "Review workspace diffs and propose checkpoint commits for explicit user confirmation in Git Activity; scheduled runs only remind.",
+      "path": "skills/workspace-git",
+      "requires": {}
+    },
+    {
+      "id": "workspace-organize",
+      "name": "workspace-organize",
+      "version": "0.2.0",
+      "description": "Audit workspace integrity, detect orphan or stale items, and propose clean-up actions.",
+      "path": "skills/workspace-organize",
+      "requires": {}
+    }
+  ]
+}

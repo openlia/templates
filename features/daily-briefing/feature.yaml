@@ -1,0 +1,39 @@
+schema: 1
+id: daily-briefing
+name: Daily Briefing
+version: 0.1.0
+description: Dated morning briefing reports synthesizing calendar, tasks, goals, and inbox items.
+author: OpenLia maintainers
+license: MIT
+requires:
+  core_domains:
+    - inbox
+  features: []
+  tools: []
+domains:
+  - path: inbox/daily-briefing
+    kind: extension
+    label: Daily Briefing
+    purpose: Dated morning briefing reports generated from active workspace collections.
+    lifecycle: generated -> reviewed -> archived
+    route: review
+    tags:
+      - briefing
+      - review
+    template: inbox/daily-briefing/briefing-template.md
+    include_in_briefing: false
+    skills:
+      - daily-briefing
+    feature: daily-briefing
+skills:
+  - id: daily-briefing
+    path: skills/daily-briefing
+    workspace_domains:
+      - inbox/daily-briefing
+policy:
+  allowed_domains:
+    - inbox/daily-briefing
+  allowed_actions:
+    - generate_reports
+    - create_records
+    - update_records

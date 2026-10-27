@@ -1,0 +1,33 @@
+schema: 1
+id: goals
+name: Goals & Outcomes
+version: 0.1.0
+description: High-level outcomes, rationale, milestones, and interactive goals Mini-Project.
+author: OpenLia maintainers
+license: MIT
+requires:
+  core_domains:
+    - inbox
+  features: []
+  tools: []
+domains:
+  - path: goals
+    kind: extension
+    label: Goals
+    purpose: High-level outcomes, rationale, target dates, and linked tasks.
+    lifecycle: active -> achieved or paused -> archived
+    tags:
+      - goal
+      - productivity
+    template: goals/goal-template.md
+    include_in_briefing: true
+    briefing_category: goals
+    feature: goals
+skills: []
+policy:
+  allowed_domains:
+    - goals
+  allowed_actions:
+    - create_records
+    - update_records
+    - archive_records
