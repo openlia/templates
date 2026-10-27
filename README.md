@@ -1,6 +1,6 @@
 # OpenLia Templates (`https://github.com/openlia/templates.git`)
 
-> Public community catalog of workspace profiles, modular domain features, OpenUI Mini-Projects, and workflow skills for [OpenLia](https://github.com/trchopan/openlia).
+> Public community catalog of workspace profiles, modular domain features, OpenUI Mini-Projects, and workflow skills for [OpenLia](https://github.com/openlia/openlia).
 
 OpenLia starts with an ultra-minimal generic workspace (`AGENTS.md`, `sources/`, and `inbox/ingestion/`). From this repository, you can pick and install only the profiles, domain features, Mini-Projects, and skills you need—and customize them freely while retaining upstream 3-way rebase support.
 
