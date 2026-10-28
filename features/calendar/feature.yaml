@@ -1,8 +1,8 @@
 schema: 1
 id: calendar
 name: Calendar & Remind Scheduling
-version: 0.1.0
-description: Remind-backed calendar scheduling, recurrence evaluation, and companion event notes.
+version: 0.2.0
+description: Remind-backed appointments with OpenUI month, week, and event-duration timeline views, plus companion event notes.
 author: OpenLia maintainers
 license: MIT
 requires:
