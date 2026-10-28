@@ -191,5 +191,13 @@ check or a zero exit code.
 
 ### 6. Safety & Policy Rules
 
+- **Workspace UI appointments**: The Calendar Mini-Project composes reusable
+  `CalendarMonth`, `CalendarWeek`, and `GanttChart` (event-duration timeline)
+  components around native Remind data. Its **New appointment** flow creates
+  one-off local entries with `NOQUEUE` and timezone INFO metadata. Preserve these
+  fields and stable `openlia-ui-...` tags when editing. Do not enable queueing,
+  notifications, or invitation delivery merely because attendees are listed.
+  Markdown event notes remain companion documents, never the scheduling source.
+
 - **Workspace File Mutations**: Adding or updating events in `calendar/reminders.rem` is a local workspace change. Always verify the proposed change with the user before committing destructive edits or deleting existing entries.
 - **External Calendars**: Local `reminders.rem` management does NOT authorize modifying external calendar services (Google Calendar, Microsoft Outlook, CalDAV). Modifying external calendar integrations requires explicit authorization under `modify_external_calendar` policy.

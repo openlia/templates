@@ -1,0 +1,6 @@
+root = Calendar([views])
+views = Tabs([
+  TabItem("month", "Month", [CalendarMonth()]),
+  TabItem("week", "Week", [CalendarWeek()]),
+  TabItem("timeline", "Timeline", [GanttChart()])
+])
