@@ -1,7 +1,7 @@
 ---
 name: personal-finance
 description: Use hledger and structured finance records to organize, validate, reconcile, and review personal finances.
-version: 0.3.0
+version: 0.4.0
 platforms: [macos, linux]
 required_environment_variables: []
 required_credential_files: []
@@ -130,6 +130,27 @@ write under this skill's authority rules, not generic workspace cleanup:
   treating the restructuring as complete.
 
 ### Accounts and Supporting Records
+
+#### Workspace UI and ledger scopes
+
+The Finance Mini-Project provides read-only native hledger reports and **New
+account** mapping creation. Saving a mapping changes only `finance/accounts/`:
+it never creates a journal, adds an `account` directive, posts an opening balance,
+or changes an external account. Its template/schema and defaults are observable
+before saving. An opening-balance date is evidence metadata, not a posting.
+
+`journal_path` identifies the **main journal / ledger scope**, not a file that
+owns the account. For example, `main.journal` can include both
+`payslips-company-A.hledger` and `bank-B.hledger`, whose postings reference the
+same `assets:bank:B` account. Use one mapping for that scope; identical names in
+independent scopes are not automatically combined. Preserve include semantics.
+
+The UI reports whole calendar months, regular actual postings, and one selected
+commodity at a time without market/cost conversion. Its Sankey shows credits
+through transaction groups to debits: it is accounting posting flow, not inferred
+cash-spending allocation. Payroll and statement entries are not automatically
+deduplicated. Source data must still follow the transaction/reconciliation rules
+below. Unsupported report inputs fail visibly; never invent totals as a fallback.
 
 Use conventional account groups when they fit the person's records:
 
