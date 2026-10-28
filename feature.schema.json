@@ -35,6 +35,11 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "openlia": {
+          "type": "string",
+          "pattern": "^>=(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(?![\\s\\S])",
+          "description": "Minimum stable OpenLia runtime release, for example >=1.2.3."
+        },
         "core_domains": {
           "type": "array",
           "items": {
@@ -60,20 +65,16 @@
           "uniqueItems": true
         },
         "python": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "minLength": 1
-          },
-          "uniqueItems": true
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$)).+",
+          "description": "Relative path to the skill's Python environment manifest, not a package list."
         },
         "bun": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "minLength": 1
-          },
-          "uniqueItems": true
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$)).+",
+          "description": "Relative path to the skill's Bun environment manifest, not a package list."
         }
       }
     },
