@@ -51,7 +51,7 @@ openlia/templates
 ## Usage with `openlia` CLI
 
 ```bash
-# Sync the latest catalog from https://github.com/openlia/templates.git
+# Sync the runtime release's pinned catalog (or your explicit templates source/ref)
 openlia features sync
 
 # List available features and skills
@@ -69,5 +69,11 @@ openlia init --local --template personal-os
 ## Validating the Catalog
 
 ```bash
+python3 -m pip install -r requirements-dev.txt
+python3 -m unittest discover -s scripts -p 'test_*.py'
 python3 scripts/validate_catalog.py
 ```
+
+See [Contributing](CONTRIBUTING.md) for runtime compatibility requirements,
+paired-PR delivery, the one-command integration runner, catalog releases, and
+local two-checkout development.
