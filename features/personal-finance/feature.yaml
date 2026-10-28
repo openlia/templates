@@ -1,8 +1,8 @@
 schema: 1
 id: personal-finance
 name: Personal Finance & Double-Entry Accounting
-version: 0.3.0
-description: Double-entry hledger bookkeeping, statement intake, account mappings, portfolio valuation, and financial reviews.
+version: 0.4.0
+description: Read-only hledger dashboards, structured account mappings, double-entry bookkeeping, statement intake, and financial reviews.
 author: OpenLia maintainers
 license: MIT
 requires:
@@ -16,7 +16,7 @@ domains:
   - path: finance
     kind: extension
     label: Finance
-    purpose: Budgets, spending notes, and financial reviews.
+    purpose: Read-only ledger reports and charts, account mappings, and financial reviews.
     lifecycle: active -> archived
     tags:
       - finance

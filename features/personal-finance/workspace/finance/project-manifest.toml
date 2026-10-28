@@ -1,7 +1,7 @@
 [project]
 id = "finance"
 name = "Personal Finance"
-description = "Plain-text accounting ledger overview and periodic financial reviews."
+description = "Read-only hledger charts, ledger scopes, account mappings, and financial reviews."
 icon = "wallet"
 
 [data]
@@ -16,4 +16,4 @@ skills = ["personal-finance"]
 
 [[logic.prompts]]
 label = "Generate monthly financial review"
-prompt = "Review my ledger in finance/main.journal and create or update the current month's financial review in finance/."
+prompt = "Identify my main journal and its included files under finance/, then prepare a scoped financial review. Ask before any journal write; account mappings alone never authorize postings."
