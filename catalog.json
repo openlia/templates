@@ -53,7 +53,7 @@
     {
       "id": "calendar",
       "name": "Calendar & Remind Scheduling",
-      "version": "0.2.0",
+      "version": "0.3.0",
       "description": "Remind-backed appointments with OpenUI month, week, and event-duration timeline views, plus companion event notes.",
       "path": "features/calendar",
       "domains": [
@@ -227,7 +227,7 @@
     {
       "id": "personal-finance",
       "name": "Personal Finance & Double-Entry Accounting",
-      "version": "0.4.0",
+      "version": "0.5.0",
       "description": "Read-only hledger dashboards, structured account mappings, double-entry bookkeeping, statement intake, and financial reviews.",
       "path": "features/personal-finance",
       "domains": [

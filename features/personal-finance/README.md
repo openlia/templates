@@ -1,9 +1,17 @@
-# Personal Finance 0.4
+# Personal Finance 0.5
 
-Open [Finance](openlia://projects/finance) for Overview, Flows, Spending, Trends,
-Accounts, and Reviews. Deploy a workspace-ui release supporting `Finance`,
+Open [Finance](openlia://workspace/finance/overview.md) for Overview, Flows, Spending, Trends,
+and Accounts. Browse review documents in `finance/reviews/` through Documents;
+the old manifest-backed Reviews table is removed. Deploy a workspace-ui release supporting `Finance`,
 `FinanceOverview`, `FinanceChart`, `FinanceAccounts`, and `SankeyDiagram` before
 updating this feature. Runtime hledger must also be installed.
+
+Personal Finance 0.5.0 requires the inline OpenUI runtime in `openlia/openlia#193`.
+The view lives in a fenced `openui` block in Markdown. Deploy the compatible
+runtime first; no compatible released minimum has been assigned yet, and the
+unchanged development version is not a compatibility guarantee. Preserve local
+files through the normal feature update/rebase flow, never automatic deletion
+of old manifests, UI files, records, or journals.
 
 ## Account mappings, not journal mutations
 

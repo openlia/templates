@@ -1,10 +1,17 @@
 # Calendar
 
-Open [Calendar](openlia://projects/calendar) for **Month**, **Week**, and
+Open [Calendar](openlia://workspace/calendar/overview.md) for **Month**, **Week**, and
 **Timeline** views. The timeline shows event durations, not task dependencies.
 These views require a workspace-ui release with the `Calendar`, `CalendarMonth`,
 `CalendarWeek`, and `GanttChart` OpenUI components and native Remind installed on
-the workspace-ui server.
+the workspace-ui server. The view is a fenced `openui` block in Markdown,
+not a Mini-Project manifest or standalone UI file.
+
+Calendar 0.3.0 requires the inline OpenUI runtime in `openlia/openlia#193`.
+Deploy that runtime before updating this feature. No compatible released minimum
+has been assigned yet; the unchanged development version is not a compatibility
+guarantee. Preserve local files through the normal feature update/rebase flow;
+do not delete old manifests, UI files, or appointments automatically.
 
 ## Create an appointment
 
