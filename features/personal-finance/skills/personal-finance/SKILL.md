@@ -1,7 +1,7 @@
 ---
 name: personal-finance
 description: Use hledger and structured finance records to organize, validate, reconcile, and review personal finances.
-version: 0.4.0
+version: 0.5.0
 platforms: [macos, linux]
 required_environment_variables: []
 required_credential_files: []
@@ -133,7 +133,7 @@ write under this skill's authority rules, not generic workspace cleanup:
 
 #### Workspace UI and ledger scopes
 
-The Finance Mini-Project provides read-only native hledger reports and **New
+The inline view in `finance/overview.md` provides read-only native hledger reports and **New
 account** mapping creation. Saving a mapping changes only `finance/accounts/`:
 it never creates a journal, adds an `account` directive, posts an opening balance,
 or changes an external account. Its template/schema and defaults are observable

@@ -1,7 +1,7 @@
 ---
 name: calendar
 description: Manage calendar events, agendas, reminders, and recurring schedules by authoring Remind entries directly with the LLM.
-version: 0.1.0
+version: 0.2.0
 platforms: [macos, linux]
 required_environment_variables: []
 required_credential_files: []
@@ -191,7 +191,7 @@ check or a zero exit code.
 
 ### 6. Safety & Policy Rules
 
-- **Workspace UI appointments**: The Calendar Mini-Project composes reusable
+- **Workspace UI appointments**: The inline view in `calendar/overview.md` composes reusable
   `CalendarMonth`, `CalendarWeek`, and `GanttChart` (event-duration timeline)
   components around native Remind data. Its **New appointment** flow creates
   one-off local entries with `NOQUEUE` and timezone INFO metadata. Preserve these

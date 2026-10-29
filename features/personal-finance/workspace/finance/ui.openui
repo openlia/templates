@@ -1,9 +1,0 @@
-root = Finance([views])
-views = Tabs([
-  TabItem("overview", "Overview", [FinanceOverview(), FinanceChart("income-expenses", "bar")]),
-  TabItem("flows", "Flows", [FinanceChart("flows", "sankey")]),
-  TabItem("spending", "Spending", [FinanceChart("spending", "bar"), FinanceChart("spending", "pie")]),
-  TabItem("trends", "Trends", [FinanceChart("balances", "line")]),
-  TabItem("accounts", "Accounts", [FinanceAccounts()]),
-  TabItem("reviews", "Reviews", [RecordTable(["title", "period", "review_date", "journal_path"])])
-])
